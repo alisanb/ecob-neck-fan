@@ -108,6 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead');
+            }
+
             // Если все хорошо, разрешаем браузеру отправить форму в iframe
             isSubmitting = true;
             const submitBtn = orderForm.querySelector('.submit_btn');
